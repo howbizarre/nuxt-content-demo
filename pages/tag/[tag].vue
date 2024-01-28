@@ -20,7 +20,7 @@ const { tag } = useRoute().params;
 
         <div class="blog-card--meta my-4 ml-4">
           <h3 class="text-2xl font-bold">
-            <NuxtLink :to="blog.slug">
+            <NuxtLink :to="`/${blog.slug}`">
               {{ blog.title }}
               <span class="sr-only">Link to the blog post</span>
             </NuxtLink>
