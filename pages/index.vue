@@ -29,6 +29,10 @@ useHead({
           </h3>
 
           <div class="text-sm text-gray-500 mt-px block">{{ (`${blog.date}`).split("T")[0] }}</div>
+
+          <p>
+            <ContentDoc :path="`/posts/${blog.slug}`" excerpt />
+          </p>
           
           <template v-if="blog.tags">
             <div class="mt-2 text-xs">

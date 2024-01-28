@@ -12,7 +12,13 @@ const { slug } = useRoute().params;
           </h1>
 
           <p class="text-gray-500 text-sm mt-2">
-            {{ doc.date }}
+            <p class="mb-2">{{ (`${doc.date}`).split('T')[0] }}</p>
+            
+            <template v-for="(tag, index) in doc.tags">
+              <NuxtLink :to="`/tag/${tag}`" class="px-1 pb-1 rounded bg-gray-100 border border-gray-400/25 mr-2 shadow-sm capitalize cursor-pointer">
+                {{ tag }}
+              </NuxtLink>
+            </template>
           </p>
         </div>
 

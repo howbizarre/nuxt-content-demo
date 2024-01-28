@@ -9,6 +9,8 @@ slug: mongo-db
 
 Building dynamic web applications often requires seamless integration with a robust database solution. When it comes to creating powerful server-side applications, MongoDB has emerged as a popular choice among developers due to its flexibility and scalability. Combined with the Vue.js framework, Nuxt.js provides a solid foundation for building fast, server-rendered applications. However, incorporating MongoDB and its object modeling tool, Mongoose, into a Nuxt project might seem like a daunting task for those new to the stack.
 
+<!--more-->
+
 In this blog post, we'll explore two simple yet effective methods to add MongoDB and Mongoose to your Nuxt 3 project. Whether you're a seasoned developer or just starting your journey in full-stack web development, this guide will help you leverage the capabilities of MongoDB and Mongoose within the Nuxt ecosystem.
 
 ## Prerequisites
