@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-useHead({
-  title: "Nuxt Content Blog Demo",
-});
+const { tag } = useRoute().params;
 </script>
 
 <template>
-  <div>
+  <div v-if="tag">
     <ContentList path="/posts"
-                 fields="title,date,thumbnail"
-                 :query="{ draft: false, sort: [{ date: -1 }] }"
+                 fields="tags,title,date,thumbnail"
+                 :query="{ where: { tags: { $contains: tag } } } as any"
                  v-slot="{ list }">
       <div v-for="blog in list"
            :key="blog.slug"
@@ -28,8 +26,8 @@ useHead({
             </NuxtLink>
           </h3>
 
-          <div class="text-sm text-gray-500 mt-px block">{{ (`${blog.date}`).split("T")[0] }}</div>
-          
+          <div class="text-sm text-gray-500 mt-px block">{{ `${((`${blog.date}`).split('T'))[0]}` }}</div>
+
           <template v-if="blog.tags">
             <div class="mt-2 text-xs">
               <template v-for="tag in blog.tags">
