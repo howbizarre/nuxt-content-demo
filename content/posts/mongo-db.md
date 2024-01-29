@@ -9,8 +9,6 @@ slug: mongo-db
 
 Building dynamic web applications often requires seamless integration with a robust database solution. When it comes to creating powerful server-side applications, MongoDB has emerged as a popular choice among developers due to its flexibility and scalability. Combined with the Vue.js framework, Nuxt.js provides a solid foundation for building fast, server-rendered applications. However, incorporating MongoDB and its object modeling tool, Mongoose, into a Nuxt project might seem like a daunting task for those new to the stack.
 
-<!--more-->
-
 In this blog post, we'll explore two simple yet effective methods to add MongoDB and Mongoose to your Nuxt 3 project. Whether you're a seasoned developer or just starting your journey in full-stack web development, this guide will help you leverage the capabilities of MongoDB and Mongoose within the Nuxt ecosystem.
 
 ## Prerequisites
@@ -91,11 +89,7 @@ If you navigate to the `/api/users` route, you should see a list of all the user
 
 If you enjoy learning through video tutorials, I have created a video where i walk you through the above steps:
 
-<iframe loading="lazy" style="border: 0; top: 0; left: 0; width: 100%; height: 350px;" src="https://www.youtube.com/embed/h10sAu3ETr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ### Example Project
-
-<iframe loading="lazy" style="border: 0; top: 0; left: 0; width: 100%; height: 500px;" src="https://stackblitz.com/edit/nuxt-server-utils?ctl=1&embed=1&file=nuxt.config.ts&hideNavigation=1" scrolling="" allowfullscreen="allowfullscreen"></iframe>
 
 ## Method 2: Creating a Nitro plugin
 
@@ -149,13 +143,9 @@ That's it! Now you can use mongoose in your Nuxt 3 server routes like how it is 
 
 If you prefer video tutorials, you can watch the following video where I walk you through the process of adding MongoDB and Mongoose to a Nuxt 3 project:
 
-<iframe loading="lazy" style="border: 0; top: 0; left: 0; width: 100%; height: 350px;" src="https://www.youtube.com/embed/EidO0c9L6b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ### Example Project
 
 Play around with the example project to get a better understanding of how to use MongoDB and Mongoose with Nuxt 3.
-
-<iframe loading="lazy" style="border: 0; top: 0; left: 0; width: 100%; height: 500px;" src="https://stackblitz.com/github/jahidanowar/nuxt3-mongoose?ctl=1&embed=1&file=nuxt.config.ts&hideNavigation=1&theme=dark&view=editor" scrolling="" allowfullscreen="allowfullscreen"></iframe>
 
 You ca find the full source code of this example [here](https://github.com/jahidanowar/nuxt3-mongoose).
 

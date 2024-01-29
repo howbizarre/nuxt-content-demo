@@ -3,34 +3,30 @@ const { slug } = useRoute().params;
 </script>
 
 <template>
-  <article class="bg-gray-100 dark:bg-gray-800 rounded-2xl">
+  <article class="bg-white rounded-2xl">
     <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
+      <!-- Header  -->
       <header>
         <div class="text-center p-5">
-          <h1 class="text-4xl font-bold lg:w-2/3 mx-auto">
-            {{ doc.title }}
-          </h1>
-
-          <p class="text-gray-500 text-sm mt-2">
-            <p class="mb-2">{{ (`${doc.date}`).split('T')[0] }}</p>
-            
-            <template v-for="(tag, index) in doc.tags">
-              <NuxtLink :to="`/tag/${tag}`" class="px-1 pb-1 rounded bg-gray-100 dark:bg-gray-800 border border-gray-400/25 mr-2 shadow-sm capitalize cursor-pointer">
-                {{ tag }}
-              </NuxtLink>
-            </template>
-          </p>
+          <h1 class="text-4xl font-bold lg:w-2/3 mx-auto">{{ doc.title }}</h1>
+          <p class="text-gray-500 text-sm mt-2">{{ doc.date }}</p>
         </div>
-
-        <img v-if="doc.thumbnail"
-             :src="doc.thumbnail"
-             :alt="doc.title"
-             class="w-full" />
+        <img
+          v-if="doc.thumbnail"
+          :src="doc.thumbnail"
+          :alt="doc.title"
+          class="w-full"
+        />
       </header>
+      <!-- ./ Header  -->
 
+      <!-- Content -->
       <div class="mt-4 content p-5">
+        <!-- Content  -->
         <ContentRenderer :value="doc" />
+        <!-- ./ Content  -->
       </div>
+      <!-- ./ Content  -->
     </ContentDoc>
   </article>
 </template>
@@ -44,11 +40,23 @@ const { slug } = useRoute().params;
 .content h3:not(:last-child),
 .content h4:not(:last-child),
 .content pre:not(:last-child),
-.content table:not(:last-child) { @apply mb-4; }
+.content table:not(:last-child) {
+  @apply mb-4;
+}
 
-.content h1 { @apply text-3xl font-bold; }
-.content h2 { @apply text-2xl font-bold; }
-.content h3 { @apply text-xl font-bold; }
-.content h4 { @apply text-lg font-bold; }
-.content h5 { @apply text-base font-bold; }
+.content h1 {
+  @apply text-3xl font-bold;
+}
+.content h2 {
+  @apply text-2xl font-bold;
+}
+.content h3 {
+  @apply text-xl font-bold;
+}
+.content h4 {
+  @apply text-lg font-bold;
+}
+.content h5 {
+  @apply text-base font-bold;
+}
 </style>
