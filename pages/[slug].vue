@@ -3,7 +3,7 @@ const { slug } = useRoute().params;
 </script>
 
 <template>
-  <article class="bg-white rounded-2xl">
+  <article class="bg-gray-100 dark:bg-gray-800 rounded-2xl">
     <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
       <header>
         <div class="text-center p-5">
@@ -15,7 +15,7 @@ const { slug } = useRoute().params;
             <p class="mb-2">{{ (`${doc.date}`).split('T')[0] }}</p>
             
             <template v-for="(tag, index) in doc.tags">
-              <NuxtLink :to="`/tag/${tag}`" class="px-1 pb-1 rounded bg-gray-100 border border-gray-400/25 mr-2 shadow-sm capitalize cursor-pointer">
+              <NuxtLink :to="`/tag/${tag}`" class="px-1 pb-1 rounded bg-gray-100 dark:bg-gray-800 border border-gray-400/25 mr-2 shadow-sm capitalize cursor-pointer">
                 {{ tag }}
               </NuxtLink>
             </template>
