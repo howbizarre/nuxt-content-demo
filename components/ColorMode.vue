@@ -17,10 +17,10 @@ const isDark = computed({
     <ClientOnly>
       <button @click="isDark = !isDark" class="btn btn-default">
         <template v-if="isDark">
-          {{ $t("golight") }} <SunIcon class="btn--icon-right" aria-hidden="true" />
+          Go Light <SunIcon class="btn--icon-right" aria-hidden="true" />
         </template>
         <template v-else>
-          {{ $t("godark") }} <MoonIcon class="btn--icon-right" aria-hidden="true" />
+          Go Dark <MoonIcon class="btn--icon-right" aria-hidden="true" />
         </template>
       </button>
     </ClientOnly>

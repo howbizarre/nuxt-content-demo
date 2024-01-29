@@ -3,7 +3,7 @@ const { slug } = useRoute().params;
 </script>
 
 <template>
-  <article class="bg-white rounded-2xl">
+  <article class="bg-white dark:bg-black rounded-2xl">
     <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
       <!-- Header  -->
       <header>
